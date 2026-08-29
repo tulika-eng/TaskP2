@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulika Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <nav class="flex justify-between items-center px-10 py-1 bg-white">
+        <h1 class="text-2xl font-bold">DEV@Deakin</h1>
+
+        <div class="flex gap-7 text-decoration-color:var(--color-blue);">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative h-96 group overflow-hidden">
+
+        <img src="images/banner.png" alt="Deakin University" class="w-full h-full ">
+        <div class="absolute bottom-0 left-0 w-full bg-black/70 text-white text-center py-4
+                opacity-0 group-hover:opacity-100 transition duration-300">
+            <h2 class="text-2xl">
+                Hello, I am Tulika. Welcome to my personal Webpage
+            </h2>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">About Me</h2>
+        <img src="images/profile (1).jpeg" alt="Tulika"
+            class="  w-40 h-40 object-cover  rounded-full shadow-lg mx-auto mb-6">
+        <p class="max-w-2xl font-weight: 600; mx-auto text-lg">
+            My name is Tulika, and I am a second-year Software Engineering student with a strong interest in technology,
+            poster design, and research.
+            I am passionate about continuous learning and strive to expand my knowledge and skills every day.
+            I have been an active member of the GlobeX Club and was selected to serve as its Secretary, which has helped
+            me develop valuable leadership,
+            communication, and teamwork skills.Over the past year, I have gained experience with a range of
+            technologies, including Docker, Fusion 360, and
+            PostgreSQL, while continuing to explore new tools and concepts in the field of software engineering. I am
+            eager to keep learning, take on new challenges,
+            and further develop my technical and professional skills.
+        </p>
+    </section>
+
+    <section id="work" class="bg-white py-10 px-2 mt-4 text-center">
+        <h2 class="text-2xl font-bold mx-auto">Things I have done after joining college</h2>
+
+        <!-- Projects Section -->
+        <section class="py-12">
+
+            <!-- flex is used to place items side by side on medium and larger screens -->
+            <!-- flex-col means items appear one below another on small screens -->
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
+
+                <!-- Achievement 1 -->
+                <div class="bg-white rounded-lg flex-1">
+                    <img src="images/poster.jpeg" alt="Poster Design" class="w-full h-64 object-cover rounded-lg">
+
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">
+                            Poster Design
+                        </h3>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            I have a strong interest in poster design and enjoy creating
+                            visually appealing and creative designs. Through this work,
+                            I have developed my creativity and learned how to effectively
+                            communicate ideas through visual content.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Achievement 2 -->
+                <div class="bg-white rounded-lg flex-1">
+                    <img src="images/miss-flimy.jpeg" alt="Miss Filmy Icon" class="w-full h-64 object-cover rounded-lg">
+
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">
+                            Miss Filmy Icon - Freshers Award
+                        </h3>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            I was honoured to receive the Miss Filmy Icon award during
+                            the Freshers event. This achievement was a memorable experience
+                            and gave me an opportunity to participate, express myself,
+                            and showcase my confidence.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">My Gallery</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+                <img src="images/profile (1).jpeg" alt="Asthetic photo" class="w-full h-64 object-cover rounded-lg">
+
+                <img src="images/food.jpeg" alt="Food" class="w-full h-64 object-cover rounded-lg">
+
+                <img src="images/book.jpeg" alt="Book" class="w-full h-64 object-cover rounded-lg">
+
+                <img src="images/flower.jpeg" alt="flower" class="w-full h-64 object-cover rounded-lg">
+
+                <img src="images/paiting.jpeg" alt="Painting" class="w-full h-64 object-cover rounded-lg">
+                <img src="images/chitkara.jpeg" alt="Painting" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <section id="contact" class="bg-gray-100 py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Subscribe to DEV@Deakin</h2>
+
+```
+<p class="text-gray-600 mb-6">
+    Subscribe to receive updates, news and information.
+</p>
+
+<form id="subscribeForm" class="max-w-md mx-auto">
+    <div class="flex gap-2">
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg"
+        >
+
+        <button
+            type="submit"
+            class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+        >
+            Subscribe
+        </button>
+    </div>
+
+    <p id="message" class="mt-4 font-semibold"></p>
+</form>
+
+
+</section>
+
+<script>
+    const form = document.getElementById("subscribeForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+
+        message.textContent = "Subscribing...";
+        message.className = "mt-4 font-semibold";
+
+        try {
+            const response = await fetch("/subscribe", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email: email })
+            });
+
+            const data = await response.json();
+
+            message.textContent = data.message;
+
+            if (data.success) {
+                message.classList.add("text-green-600");
+                form.reset();
+            } else {
+                message.classList.add("text-red-600");
+            }
+
+        } catch (error) {
+            console.error(error);
+
+            message.textContent =
+                "Something went wrong. Please try again later.";
+
+            message.classList.add("text-red-600");
+        }
+    });
+</script>
+
+</body>
+
+</html>
